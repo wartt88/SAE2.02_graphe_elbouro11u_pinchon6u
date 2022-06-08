@@ -81,7 +81,7 @@ public class GraphListe implements Graphe
         while(!actuel.isEmpty()){
             int i=0;
             for (int j = 0; j < actuel.size(); j++) {
-                if (actuel.get(i).getNom().indexOf(actuel.get(j).getNom())<0)
+                if (actuel.get(i).getNom().compareTo(actuel.get(j).getNom())>0)
                     i=j;
             }
             res+=actuel.get(i).toString();
