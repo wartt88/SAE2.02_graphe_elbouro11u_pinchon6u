@@ -61,19 +61,19 @@ public class GraphListe implements Graphe
     @Override
     public List<Arc> suivants(String n)
     {
-        boolean trouve=false;
         int i=0;
-        while(!trouve){
+        while(i<this.ensNoeuds.size()){
             if (this.ensNoeuds.get(i).getNom().equals(n))
-                trouve=true;
+                return this.ensNoeuds.get(i).getAdj();
             else
                 i++;
         }
-        return this.ensNoeuds.get(i).getAdj();
+        return null;
     }
 
     public String toString(){
-
+        List<Noeud> actuel = this.ensNoeuds;
+        int i=0;
         String res = "";
 
         return res;
