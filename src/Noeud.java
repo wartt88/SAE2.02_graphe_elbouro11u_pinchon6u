@@ -56,4 +56,15 @@ public class Noeud {
     public void ajouterArc(String destination,double cout){
         this.adj.add(new Arc(destination,cout));
     }
+
+    public String toString()
+    {
+        String res;
+        res = this.nom + " -> ";
+        for(int i =0; i<this.adj.size();i++)
+        {
+            res += this.adj.get(i).getDest()+ "(" + this.adj.get(i).getCout() + ") ";
+        }
+        return  res;
+    }
 }

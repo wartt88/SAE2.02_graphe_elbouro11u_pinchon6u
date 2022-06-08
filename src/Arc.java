@@ -22,4 +22,12 @@ public class Arc
         }
 
     }
+
+    public String getDest() {
+        return dest;
+    }
+
+    public double getCout() {
+        return cout;
+    }
 }

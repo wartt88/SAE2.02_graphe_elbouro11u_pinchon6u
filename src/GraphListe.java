@@ -72,8 +72,7 @@ public class GraphListe implements Graphe
     }
 
     public String toString(){
-        List<Noeud> actuel = this.ensNoeuds;
-        int i=0;
+        List<Noeud> listeAct = this.ensNoeuds;
         String res = "";
 
         return res;
