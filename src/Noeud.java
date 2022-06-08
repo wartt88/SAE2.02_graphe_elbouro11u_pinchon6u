@@ -29,7 +29,7 @@ public class Noeud {
      */
     @Override
     public boolean equals(Object o) {
-        return this.nom.equals(((Noeud)o).getNom());
+        return this.nom.equals(((Noeud) o).getNom());
     }
 
     /**
@@ -38,6 +38,14 @@ public class Noeud {
      */
     public String getNom() {
         return nom;
+    }
+
+    /**
+     * getter des arcs adjcents
+     * @return adj
+     */
+    public List<Arc> getAdj() {
+        return adj;
     }
 
     /**
