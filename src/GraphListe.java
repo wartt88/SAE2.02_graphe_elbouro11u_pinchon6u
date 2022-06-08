@@ -15,9 +15,20 @@ public class GraphListe implements Graphe
 
     public void ajouterArc(String depart, String destination, double cout)
     {
-        this.ensNom.add(depart);
-        this.ensNoeuds.add(new Arc(destination,cout));
-        this.ensNom.add(destination);
+       if(!this.ensNom.contains(depart))
+       {
+           this.ensNom.add(depart);
+       }
+       if(!this.ensNom.contains(destination))
+       {
+           this.ensNom.add(destination);
+       }
+
+       Arc arc = new Arc(destination,cout);
+       if(!this.ensNoeuds.contains(arc))
+       {
+           this.ensNoeuds.add(arc);
+       }
     }
     /**
      * méthode qui renvoie la liste des nœuds
@@ -25,7 +36,8 @@ public class GraphListe implements Graphe
      * @return les noms en String
      */
     @Override
-    public List<String> listeNoeuds() {
+    public List<String> listeNoeuds()
+    {
         return null;
     }
 
@@ -36,7 +48,8 @@ public class GraphListe implements Graphe
      * @return retourne la liste d'arc
      */
     @Override
-    public List<Arc> suivants(String n) {
+    public List<Arc> suivants(String n)
+    {
         return null;
     }
 }
