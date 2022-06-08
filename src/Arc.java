@@ -9,9 +9,17 @@ public class Arc
      */
     private double cout;
 
-    public Arc(Noeud dest, double ct)
+    public Arc(String dest, double ct)
     {
-        this.dest= dest.getNom();
-        this.cout = ct;
+        this.dest= dest;
+        if(ct>0)
+        {
+            this.cout =ct;
+        }
+        else
+        {
+            this.cout = 0;
+        }
+
     }
 }
