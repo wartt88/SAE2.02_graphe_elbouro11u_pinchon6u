@@ -2,7 +2,6 @@ import java.util.List;
 
 public class GraphListe implements Graphe
 {
-
     /**
      * méthode qui renvoie la liste des nœuds
      *
