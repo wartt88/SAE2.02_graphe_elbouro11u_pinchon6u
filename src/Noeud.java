@@ -63,8 +63,9 @@ public class Noeud {
         res = this.nom + " -> ";
         for(int i =0; i<this.adj.size();i++)
         {
-            res += this.adj.get(i).getDest()+ "(" + this.adj.get(i).getCout() + ") ";
+            res += this.adj.get(i).getDest()+ "(" + this.adj.get(i).getCout() + ")";
         }
+        res += "\n";
         return  res;
     }
 }
