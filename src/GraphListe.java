@@ -71,11 +71,23 @@ public class GraphListe implements Graphe
         return null;
     }
 
+    /**
+     * methode d'affichage d'un graphList
+     * @return string
+     */
     public String toString(){
         List<Noeud> actuel = this.ensNoeuds;
-        int i=0;
         String res = "";
-
+        while(!actuel.isEmpty()){
+            int i=0;
+            for (int j = 0; j < actuel.size(); j++) {
+                if (actuel.get(i).getNom().indexOf(actuel.get(j).getNom())<0)
+                    i=j;
+            }
+            res+=actuel.get(i).toString();
+            actuel.remove(i);
+        }
         return res;
     }
+
 }
