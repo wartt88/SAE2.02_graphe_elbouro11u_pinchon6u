@@ -38,7 +38,7 @@ public class GraphListe implements Graphe
     @Override
     public List<String> listeNoeuds()
     {
-        return null;
+        System.out.println("salut");
     }
 
     /**
