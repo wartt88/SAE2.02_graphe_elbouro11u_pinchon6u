@@ -3,9 +3,9 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        GraphListe graphe = new GraphListe("Graphes/Graphe1.txt");
-        System.out.println(graphe.toString());
-        System.out.println(graphe.toGraphviz("G"));
-    }
+        GraphListe graphe = new GraphListe("Graphes/Graphe000000.txt");
+        BellmanFord bm = new BellmanFord();
 
+        System.out.println(bm.resoudre(graphe,"A").toString());
+    }
 }
