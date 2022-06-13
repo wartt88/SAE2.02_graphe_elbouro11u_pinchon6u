@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class BellmanFord
+public class BellmanFord implements Algorithme
 {
     /**
      * fonction BellmanFord(G,d)
@@ -11,7 +11,7 @@ public class BellmanFord
         l(d)<-0
         //boucle principale :
         continuer <- vrai
-        tant que continuer faire :
+        tant que continuer, faire :
             continuer <- faux
             pour chaque arc(u,v,poids) de G faire :
                 Si L(v) > L (u) + poids alors
@@ -23,6 +23,12 @@ public class BellmanFord
         ftantque
      **/
 
+    /**
+     * méthode résoudre qui permet de lancer l'algorithme de BellmanFord
+     * @param g Graphlist
+     * @param depart Le nœud de départ
+     * @return retourne une valeur.
+     */
     public Valeur resoudre(Graphe g, String depart)
     {
         Valeur valeur = new Valeur();

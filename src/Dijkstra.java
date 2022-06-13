@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dijkstra {
+public class Dijkstra implements Algorithme{
     /**
      * Entrees :
      * G un graphe orient ́e avec une pond ́eration (poids) positive des arcs
@@ -30,6 +30,12 @@ public class Dijkstra {
      * Fin
      */
 
+    /**
+     * méthode qui permet de résoudre l'algorithme de Dijkstra
+     * @param g Graphlist
+     * @param depart noeud de départ
+     * @return renvoie la valeur
+     */
     public Valeur resoudre(Graphe g, String depart) {
         Valeur valeur = new Valeur();
         List<String> aTraiter = new ArrayList<>();
