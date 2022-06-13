@@ -45,30 +45,14 @@ public class GraphListe implements Graphe
             String dpt="faux";
             String dest="faux";
             int cout=0;
-            boolean Bdepart = false;
-            boolean Bdestination = false;
-            boolean Bcout = false;
-            String res = "";
-            for (int i = 0; i < ligne.length(); i++) {
-                if (ligne.charAt(i)=='\t' || i==ligne.length()-1){
-                    if (!Bdepart){
-                        dpt=res;
-                        res="";
-                        Bdepart=true;
-                    }else if (!Bdestination){
-                        dest=res;
-                        res="";
-                        Bdestination=true;
-                    }else if (!Bcout){
-                        res+=ligne.charAt(i);
-                        cout=Integer.parseInt(res);
-                        res="";
-                        Bcout=true;
-                    }
-                }else {
-                    res += ligne.charAt(i);
-                }
-            }
+            String[] res = ligne.split("\t");
+            if (res.length!=0 && res[0]!=null)
+                dpt=res[0];
+            if (res.length>1 && res[1]!=null)
+                dest=res[1];
+            if (res.length>2 && res[2]!=null)
+                cout= Integer.parseInt(res[2]);
+
             ajouterArc(dpt,dest,cout);
 
             // lecture
