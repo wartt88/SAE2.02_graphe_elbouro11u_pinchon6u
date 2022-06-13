@@ -8,7 +8,7 @@ public class TestDijkstra {
     @Test
     public void test_Djistra_fonctionnel() throws IOException {
         //initialisation :
-        GraphListe graph = new GraphListe("Graphes/Graphe000000.txt");
+        GraphListe graph = new GraphListe("Graphe000000.txt");
         Dijkstra dijkstra = new Dijkstra();
 
         //utilisation :
@@ -21,7 +21,7 @@ public class TestDijkstra {
     @Test
     public void test_Dijkstra_valeurDepart() throws IOException {
         //initialisation :
-        GraphListe graph = new GraphListe("Graphes/Graphe000000.txt");
+        GraphListe graph = new GraphListe("Graphe000000.txt");
         Dijkstra dijkstra = new Dijkstra();
 
         //utilisation :
@@ -34,7 +34,7 @@ public class TestDijkstra {
     @Test
     public void test_Dijkstra_Calcule_Parent() throws IOException {
         //initialisation :
-        GraphListe graph = new GraphListe("Graphes/Graphe000000.txt");
+        GraphListe graph = new GraphListe("Graphe000000.txt");
         Dijkstra dijkstra = new Dijkstra();
 
         //utilisation :
