@@ -88,4 +88,21 @@ public class Valeur {
 
     }
 
+    /**
+     * methode qui retourne le chemin critique pour aller au noeud
+     *
+     * @param destination le nom d un noeud
+     * @return liste de noeud
+     */
+    public List<String> calculerChemin(String destination){
+        List<String> retour = new ArrayList<>();
+        String current=destination;
+        while(this.getParent(current)!=null){
+            retour.add(0,current);
+            current=this.getParent(current);
+        }
+        retour.add(0,current);
+        return retour;
+    }
+
 }
