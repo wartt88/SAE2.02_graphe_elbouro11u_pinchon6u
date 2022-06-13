@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.List;
 
 public class Main {
 
@@ -6,6 +7,12 @@ public class Main {
         GraphListe graphe = new GraphListe("Graphes/Graphe000000.txt");
         BellmanFord bm = new BellmanFord();
 
-        System.out.println(bm.resoudre(graphe,"A").toString());
+        Valeur v = bm.resoudre(graphe,"A");
+
+        List<String> retour =v.calculerChemin("C");
+        for (String r: retour) {
+            System.out.println(r);
+        }
+
     }
 }
