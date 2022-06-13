@@ -9,7 +9,7 @@ public class TestBellmanFord
     @Test
     public void test_BellmanFord_fonctionnel() throws IOException {
         //initialisation :
-        GraphListe graph = new GraphListe("Graphes/Graphe000000.txt");
+        GraphListe graph = new GraphListe("Graphe000000.txt");
         BellmanFord bellmanFord = new BellmanFord();
 
         //utilisation :
@@ -22,7 +22,7 @@ public class TestBellmanFord
     @Test
     public void test_BellmanFord_valeurDepart() throws IOException {
         //initialisation :
-        GraphListe graph = new GraphListe("Graphes/Graphe000000.txt");
+        GraphListe graph = new GraphListe("Graphe000000.txt");
         BellmanFord bellmanFord = new BellmanFord();
 
         //utilisation :
@@ -35,7 +35,7 @@ public class TestBellmanFord
     @Test
     public void test_BellmanFord_Calcule_Parent() throws IOException {
         //initialisation :
-        GraphListe graph = new GraphListe("Graphes/Graphe000000.txt");
+        GraphListe graph = new GraphListe("Graphe000000.txt");
         BellmanFord bellmanFord = new BellmanFord();
 
         //utilisation :
