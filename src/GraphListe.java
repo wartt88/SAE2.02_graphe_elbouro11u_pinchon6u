@@ -1,9 +1,9 @@
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class GraphListe implements Graphe
 {
@@ -157,6 +157,66 @@ public class GraphListe implements Graphe
         }
         res += "}";
         return res;
+    }
+
+    /**
+     * constructeur de graphe aleatoire
+     * @param nombre nombre de noeuds souhaites dans le graphe
+     */
+    public GraphListe(int nombre){
+        //creation basique
+        this.ensNom = new ArrayList<String>();
+        this.ensNoeuds = new ArrayList<Noeud>();
+
+        // ajout de chaque noeuds
+        for (int i = 1; i <= nombre; i++) {
+            String nom = String.valueOf(i);
+            ensNom.add(nom);
+            Noeud current = new Noeud(nom);
+            ensNoeuds.add(current);
+            // ajout d un arc minimum pour chaque noeuds en etant depart
+            if (i>1){
+                Arc retour = hasardNomEtCout(current,"depart");
+                ajouterArc(nom, retour.getDest(), retour.getCout());
+            }
+        }
+        // ajout d un arc minimum pour chaque noeuds en etant destination
+        for (Noeud current:ensNoeuds) {
+            Arc retour = hasardNomEtCout(current,"destination");
+            ajouterArc(retour.getDest(), current.getNom(), retour.getCout());
+        }
+
+        //ajout de quelques arcs aleatoires
+        Random random = new Random();
+        for (int i = 0; i < nombre/2; i++) {
+            Noeud current = ensNoeuds.get(random.nextInt(ensNoeuds.size()));
+            Arc retour = hasardNomEtCout(current,"depart");
+            ajouterArc(current.getNom(), retour.getDest(), retour.getCout());
+        }
+    }
+
+    private Arc hasardNomEtCout(Noeud depart,String etat){
+        Random rand = new Random();
+        String nom="";
+        boolean valide=false;
+        while(!valide) {
+            nom = ensNom.get(rand.nextInt(ensNom.size()));
+            Noeud actuel = getNoeud(nom);
+            if (etat=="depart" && depart.getNom()!=nom && !depart.contientSuc(nom))
+                valide = true;
+            else if (etat=="destination" && depart.getNom()!=nom && !actuel.contientSuc(depart.getNom()))
+                valide=true;
+        }
+        int cout = rand.nextInt(100);
+        return new Arc(nom,cout);
+    }
+
+    private Noeud getNoeud(String nom){
+        for (int i = 0; i < this.ensNoeuds.size(); i++) {
+            if (ensNoeuds.get(i).getNom()==nom)
+                return ensNoeuds.get(i);
+        }
+        return null;
     }
 
 }

@@ -28,7 +28,7 @@ public class Main {
             Duration temps2 = Duration.between(debutDijkstra,finDijkstra);
 
             //affichage
-            System.out.println(current.getName()+" : "+temps.toNanos()+"\t"+temps2.toNanos());
+            System.out.println(current.getName()+"\t"+temps.toNanos()+"\t"+temps2.toNanos()+"\t"+graphe.listeNoeuds().size());
         }
     }
 }

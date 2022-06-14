@@ -68,4 +68,13 @@ public class Noeud {
         res += "\n";
         return  res;
     }
+
+    public boolean contientSuc(String dest){
+        boolean res = false;
+        for (int i = 0; i < this.adj.size() && !res; i++) {
+            if(adj.get(i).getDest()==dest)
+                res=true;
+        }
+        return res;
+    }
 }
