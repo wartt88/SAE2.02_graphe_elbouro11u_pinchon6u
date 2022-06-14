@@ -8,7 +8,10 @@ import java.io.IOException;
 
 public class MainDijkstra
 {
+    //execution en prenant en argument le nom des noeud dont on veut connaitre le chemin
+
     public static void main(String[] args) throws IOException {
+
         //création du graphe :
         GraphListe graph = new GraphListe("Graphes/Graphe1.txt");
         Dijkstra dijkstra = new Dijkstra();

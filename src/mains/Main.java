@@ -12,6 +12,9 @@ import java.time.Instant;
 
 public class Main {
 
+    //execution simple qui va retourner pour chacun des fichiers de graphes, son nom et
+    //son temps de calcul pour chacun des deux algorithmes
+
     public static void main(String[] args) throws IOException {
         BellmanFord bm = new BellmanFord();
         Dijkstra dj = new Dijkstra();
