@@ -1,5 +1,3 @@
-package laby;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -183,5 +181,34 @@ public class Labyrinthe {
     public boolean getMur(int x, int y) {
         // utilise le tableau de boolean
         return this.murs[x][y];
+    }
+
+    /**
+     * return un graphe cprrespondant au labyrinthe
+     * @return
+     */
+    public GraphListe genererGraphe(){
+        GraphListe g = new GraphListe();
+        int cout = 1;
+        for (int i = 0; i < this.murs.length; i++) {
+            for (int j = 0; j < this.murs[i].length; j++) {
+                if (!getMur(i,j)){
+                    // verifier la case à droite
+                    if (i>0 && !getMur(i-1,j))
+                        g.ajouterArc("\"("+i+","+j+")\"","\"("+(i-1)+","+j+")\"",cout);
+                    // verifier la case à gauche
+                    if (i<murs.length-1 && !getMur(i+1,j))
+                        g.ajouterArc("\"("+i+","+j+")\"","\"("+(i+1)+","+j+")\"",cout);
+                    // verifier la case en haut
+                    if (j>0 && !getMur(i,j-1))
+                        g.ajouterArc("\"("+i+","+j+")\"","\"("+i+","+(j-1)+")\"",cout);
+                    // verifier la case en bas
+                    if (j<murs[0].length-1 && !getMur(i,j+1))
+                        g.ajouterArc("\"("+i+","+j+")\"","\"("+i+","+(j+1)+")\"",cout);
+                }
+                // les \" sont nécessaires pour la visualisation du graphe sur Graphviz
+            }
+        }
+        return g;
     }
 }
