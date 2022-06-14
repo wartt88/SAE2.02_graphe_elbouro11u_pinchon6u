@@ -1,13 +1,22 @@
+package mains;
+
+import algorithme.Dijkstra;
+import graphes.GraphListe;
+import graphes.Valeur;
+
 import java.io.IOException;
 
 public class MainDijkstra
 {
+    //execution en prenant en argument le nom des noeud dont on veut connaitre le chemin
+
     public static void main(String[] args) throws IOException {
+
         //création du graphe :
         GraphListe graph = new GraphListe("Graphes/Graphe1.txt");
         Dijkstra dijkstra = new Dijkstra();
 
-        System.out.println("Graphe: Graphe1.txt\n");
+        System.out.println("graphes.Graphe: Graphe1.txt\n");
 
         //On calcule des chemins les plus courts pour des nœuds donnés :
         Valeur valeur  = dijkstra.resoudre(graph, "1");
