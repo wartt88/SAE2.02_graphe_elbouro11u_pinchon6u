@@ -1,3 +1,9 @@
+package mains;
+
+import algorithme.Dijkstra;
+import graphes.*;
+import laby.Labyrinthe;
+
 import java.io.IOException;
 
 public class MainLabyGraphe {
@@ -8,6 +14,7 @@ public class MainLabyGraphe {
 
         Dijkstra dj = new Dijkstra();
         Valeur v = dj.resoudre(g,"\"(1,1)\"");
+        //calcul du chemin le plus court pour atteindre le noeud "(5,5)"
         System.out.println(v.calculerChemin("\"(5,5)\""));
     }
 }

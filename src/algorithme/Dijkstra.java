@@ -1,7 +1,12 @@
+package algorithme;
+
+import algorithme.Algorithme;
+import graphes.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dijkstra implements Algorithme{
+public class Dijkstra implements Algorithme {
     /**
      * Entrees :
      * G un graphe orient ́e avec une pond ́eration (poids) positive des arcs
@@ -31,7 +36,7 @@ public class Dijkstra implements Algorithme{
      */
 
     /**
-     * méthode qui permet de résoudre l'algorithme de Dijkstra
+     * méthode qui permet de résoudre l'algorithme de algorithme.Dijkstra
      * @param g Graphlist
      * @param depart noeud de départ
      * @return renvoie la valeur

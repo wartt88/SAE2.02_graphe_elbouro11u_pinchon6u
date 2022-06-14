@@ -1,3 +1,5 @@
+package graphes;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +51,7 @@ public class Noeud {
     }
 
     /**
-     * methode ajouterArc qui ajoute un Arc a la liste
+     * methode ajouterArc qui ajoute un graphes.Arc a la liste
      * @param destination nom du noeud de destination
      * @param cout cout de l arc
      */

@@ -1,9 +1,16 @@
+package algorithme;
+
+import algorithme.Algorithme;
+import graphes.Arc;
+import graphes.Graphe;
+import graphes.Valeur;
+
 import java.util.List;
 
 public class BellmanFord implements Algorithme
 {
     /**
-     * fonction BellmanFord(G,d)
+     * fonction algorithme.BellmanFord(G,d)
      * //initialisation :
         pour n dans G faire:
             L(n)<-+∞
@@ -24,7 +31,7 @@ public class BellmanFord implements Algorithme
      **/
 
     /**
-     * méthode résoudre qui permet de lancer l'algorithme de BellmanFord
+     * méthode résoudre qui permet de lancer l'algorithme de algorithme.BellmanFord
      * @param g Graphlist
      * @param depart Le nœud de départ
      * @return retourne une valeur.

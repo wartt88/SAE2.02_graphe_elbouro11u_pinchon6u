@@ -1,8 +1,14 @@
+package mains;
+
+import algorithme.BellmanFord;
+import algorithme.Dijkstra;
+import graphes.GraphListe;
+import graphes.Valeur;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.List;
 
 public class Main {
 
@@ -21,7 +27,7 @@ public class Main {
             Instant finBellman = Instant.now();
             Duration temps = Duration.between(debutBellman,finBellman);
 
-            //Dijkstra
+            //algorithme.Dijkstra
             Instant debutDijkstra = Instant.now();
             Valeur v2 = dj.resoudre(graphe,"1");
             Instant finDijkstra = Instant.now();

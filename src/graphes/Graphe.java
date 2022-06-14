@@ -1,3 +1,5 @@
+package graphes;
+
 import java.util.List;
 
 public interface Graphe

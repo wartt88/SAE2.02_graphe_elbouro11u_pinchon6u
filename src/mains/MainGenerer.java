@@ -1,3 +1,7 @@
+package mains;
+
+import graphes.GraphListe;
+
 public class MainGenerer {
 
 

@@ -1,4 +1,4 @@
-fonction BellmanFord(G,d)
+fonction algorithme.BellmanFord(G,d)
 	//initialisation:
         pour n dans G faire:
             L(n)<-+∞
@@ -18,9 +18,9 @@ fonction BellmanFord(G,d)
         ftantque
 
 Lexique :
-	G :  Graphe 
+	G :  graphes.Graphe
 	continuer : booleen
-	arc: Arc
+	arc: graphes.Arc
 	u : noeud
 	v: noeud
 	poids : double
